@@ -1,0 +1,7 @@
+work/
+results/
+samples/
+refs/
+.vscode/
+.nextflow*
+.claude/
