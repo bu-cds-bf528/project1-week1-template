@@ -13,7 +13,7 @@ assembly, and using QUAST to compare the unpolished and final assembly.
 
 # Inputs
 
-Samplesheet (CSV: name, long_reads, short1,short2)
+Samplesheet (CSV: name, long_reads, short1, short2)
 
 # Outputs
 
