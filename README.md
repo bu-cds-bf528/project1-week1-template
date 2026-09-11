@@ -15,7 +15,7 @@ we will continue to update and refine it until it resembles a final pipeline.
 The weeks after the first will include the previous week's pipeline as well as
 additional improvements.
 
-We will talk in much greate detail about the concepts behind this project in
+We will talk in much greater detail about the concepts behind this project in
 class. For now, please focus on understanding what the pipeline is doing at
 a high-level and the nextflow concepts being introduced. 
 
@@ -44,11 +44,11 @@ We will be generating a nextflow pipeline that will perform the following steps:
 
 - [Nextflow Operators](https://docs.seqera.io/nextflow/tutorials/static-types-operators)
 - [Nextflow Tutorial](https://training.nextflow.io/latest/hello_nextflow/)
-- [CLI Resources]({{site.baseurl}}/guides/cli_resources/)
-- [Computational Environments]({{site.baseurl}}/guides/computational_environments/)
-- [Basic Conda]({{site.baseurl}}/guides/conda_guide/)
-- [Nextflow Basics]({{site.baseurl}}/guides/nextflow_basics/)
-- [Nextflow Channels]({{site.baseurl}}/guides/nextflow_channels/)
+- [CLI Resources](https://bu-bioinfo.github.io/bf528/guides/cli_resources/)
+- [Computational Environments](https://bu-bioinfo.github.io/bf528/guides/computational_environments/)
+- [Basic Conda](https://bu-bioinfo.github.io/bf528/guides/conda_guide/)
+- [Nextflow Basics](https://bu-bioinfo.github.io/bf528/guides/nextflow_basics/)
+- [Nextflow Channels](https://bu-bioinfo.github.io/bf528/guides/nextflow_channels/)
 
 ## Objectives
 
