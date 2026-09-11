@@ -32,6 +32,15 @@ Fill in one row per process in the pipeline. Derive the step list from the Objec
 sections above. "Depends on" should name the upstream step(s) whose output this step consumes
 (used for wiring channels).
 
+The rows below are a simple worked example (not from this pipeline) showing the expected format:
+a process that downloads a genome, followed by a process that runs a script on it. Delete this
+example table before you submit.
+
+| Step | Input type | Depends on *(sample)* |
+|---|---|---|
+| Download genome *(sample)* | Accession ID | - |
+| Run script on genome *(sample)* | Genome FASTA | Download genome |
+
 | Step | Input type | Depends on |
 |---|---|---|
 |  |  |  |
