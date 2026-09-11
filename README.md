@@ -224,7 +224,7 @@ You'll notice that the `script` block for the `FASTQC` and `FILTLONGER`
 processes in week1.nf are blank. Flye's command is already provided for you,
 since it's a more complex, computationally expensive step to iterate on — but
 you will need to find the appropriate commands for FastQC and filtlong and
-fill them in yourself.
+fill them in yourself. You should look for their official documentation pages.
 
 1. For FastQC, you may use the quick start command provided in the
 documentation.
@@ -252,7 +252,48 @@ each of the two processes in week1.nf.
 
 Once you've filled in your environments, wired up the `conda` paths, and
 written the FastQC and filtlong commands, run the pipeline with the `-stub`
-flag to confirm the pipeline logic and channel wiring are correct:
+flag to confirm the pipeline logic and channel wiring are corre### Specifying appropriate computational environments
+
+The channel and process logic for this pipeline is already written in the
+week1.nf file, but you will need to specify the appropriate computational
+environments for each process. In general, we will endeavor to always use
+the most up-to-date version of a tool. In the envs/ directory, you will find
+empty conda environment files for each tool already created for you that you
+will need to complete.
+
+1. Use the appropriate conda command to find the most recent version of each tool
+available on bioconda and update the YML files accordingly. Keep in mind the
+following:
+
+- The command is `conda search -c conda-forge -c bioconda <tool_name>`
+- Use the most up-to-date version and specify it as so: `tool_name=<version>`,
+which will normally look like `samtools=1.17`. Conda will list all available
+versions and the most-up-to-date version will be the last one in the list and
+should be the numerically highest version.
+
+2. Only specify a single version of a tool in each YML file. While you can
+specify multiple versions of a tool in a single YML file, we will try to
+minimize this as much as possible to avoid running into issues with conda being
+unable to resolve the dependencies.
+
+3. Once you've filled in the YML files, add the relative path to the YML file
+for each process after the line that begins with `conda` in the process.
+
+This will look something like below:
+
+```groovy
+process EXAMPLE {
+    label 'process_single'
+    conda 'envs/<name_of_yml_file>.yml'
+    ...
+}
+```
+
+Make sure to replace <name_of_yml_file> with the name of the YML file you created
+and with no <> characters in the final replacement. Now when you run nextflow, it
+will build and load the appropriate conda environment for each process.
+
+Please note how the path is relative to where the week1.nf file is located.ct:
 
 ```bash
 nextflow run week1.nf -stub
