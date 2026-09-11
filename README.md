@@ -15,6 +15,10 @@ we will continue to update and refine it until it resembles a final pipeline.
 The weeks after the first will include the previous week's pipeline as well as
 additional improvements.
 
+We will talk in much greate detail about the concepts behind this project in
+class. For now, please focus on understanding what the pipeline is doing at
+a high-level and the nextflow concepts being introduced. 
+
 # Week 1 - Understanding channels
 
 As we will discuss in class, hybrid assembly approaches combine the benefits of

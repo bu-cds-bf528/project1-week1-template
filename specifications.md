@@ -1,15 +1,15 @@
 # Objective
+
 A nextflow pipeline that takes paired-end short reads and long reads
 and generates a polished genome assembly. This will include quality control
-filtering of the long reads, followed by a draft genome assembly performed
-by Flye, and finally polishing of the draft assembly using the short reads.
-To perform the polishing, the short reads will be subjected to quality control
-before being aligned to the draft genome using Bowtie2. The alignments will be
-sorted and then used by Pilon in conjuction with the draft assembly to produce
-the final genome assembly. The quality and success of the genome assembly will
-be ascertained by running PROKKA and BUSCO on the final assembly, and using QUAST
-to compare the unpolished and final assembly. 
-
+filtering of the long reads, followed by a draft genome assembly using the
+long reads performed by Flye, and finally polishing of the draft assembly using
+the short reads. To perform the polishing, the short reads will be subjected to 
+quality control before being aligned to the draft genome using Bowtie2. The 
+alignments will be sorted and then used by Pilon in conjuction with the draft 
+assembly to produce the final genome assembly. The quality and success of the 
+genome assembly will be ascertained by running PROKKA and BUSCO on the final 
+assembly, and using QUAST to compare the unpolished and final assembly. 
 
 # Inputs
 
